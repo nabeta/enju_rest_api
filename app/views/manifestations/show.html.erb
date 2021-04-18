@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Original title:</strong>
+  <%= @manifestation.original_title %>
+</p>
+
+<p>
+  <strong>DOI:</strong>
+  <%= @manifestation.doi %>
+</p>
+
+<p>
+  <strong>ISBN:</strong>
+  <%= @manifestation.isbn_records.first&.body %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @manifestation.note %>
+</p>
+
+<%= link_to 'Edit', edit_manifestation_path(@manifestation) %> |
+<%= link_to 'Back', manifestations_path %>
